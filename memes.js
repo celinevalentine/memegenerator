@@ -13,40 +13,30 @@ memeForm.addEventListener('submit', function(e) {
     newImg.setAttribute("width", "250px");
     //add top and btm text to newImg
     let topTextInput = document.querySelector('#topText');
-    let topText = topTextInput.value;
+    let topText = topTextInput.value.toUpperCase();
     let btmTextInput = document.querySelector('#btmText');
-    let btmText = btmTextInput.value;
+    let btmText = btmTextInput.value.toUpperCase();
 
     let newDiv = document.createElement('div');
     let topTextDiv = document.createElement('div');
     let btmTextDiv = document.createElement('div');
-    topTextDiv.appendChild(topText);
-    btmTextDiv.appendChild(btmText);
+    topTextDiv.innerHTML = topText;
+    btmTextDiv.innerHTML = btmText;
+    newDiv.classList.add('memeContainer');
+    topTextDiv.classList.add('topText');
+    btmTextDiv.classList.add('btmText');
 
-    let removeButton = document.createElement("button");;
-    removeButton.innerText = "X";
+    newImg.addEventListener("click", function(evt) {
+        evt.target.parentElement.remove();
+    });
 
     newDiv.appendChild(newImg);
     newDiv.appendChild(topTextDiv);
     newDiv.appendChild(btmTextDiv);
 
-    newDiv.appendChild(removeButton);
 
     let canvas = document.querySelector('#meme-results');
     canvas.appendChild(newDiv);
 
     memeForm.reset();
-});
-// delete meme 
-let imgInput = document.querySelector('#url');
-let imgUrl = imgInput.value;
-let newImg = document.createElement("img");
-newImg.setAttribute('src', imgUrl);
-
-newImg.addEventListener('click', function(e) {
-
-    const clickedImg = e.target.tagName;
-    if (clickedImg === 'button') {
-        e.target.parentElement.remove();
-    };
 });
