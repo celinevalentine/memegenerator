@@ -1,0 +1,69 @@
+.make-meme {
+    background-color: rgb(243, 237, 237);
+    margin: 0;
+    padding: 25px;
+    text-align: center;
+}
+
+.inputBox {
+    width: 70%;
+    height: 2%;
+    padding: 12px 20px;
+    margin-left: 10%;
+    box-sizing: border-box;
+}
+
+.labels {
+    width: 150px;
+    display: inline-block;
+}
+
+#submit-button {
+    background-color: rgb(63, 91, 214);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    position: relative;
+    left: 40%;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#meme-results {
+    position: relative;
+    text-align: center;
+}
+
+.memeContainer {
+    position: relative;
+    text-align: center;
+    color: white;
+    float: left;
+}
+
+.topText {
+    position: absolute;
+    top: 15px;
+    margin: auto 0;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    height: 70px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    word-wrap: break-word;
+}
+
+.btmText {
+    position: absolute;
+    bottom: -20px;
+    width: 100%;
+    height: 90px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    word-wrap: break-word;
+}
