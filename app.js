@@ -24,14 +24,15 @@ memeForm.addEventListener("submit", function(e) {
     topTextDiv.classList.add("topText");
     btmTextDiv.classList.add("btmText");
 
-    let removeBtn = document.createElement("button");
+    let removeBtn = document.createElement("span");
     removeBtn.innerText = "X";
-    removeBtn.classList.add("remveBtn");
+
+    // removeBtn.classList.add("remveBtn");
     let removeBtnDiv = document.createElement("div");
     removeBtnDiv.classList.add("removeBtnDiv");
 
 
-    removeBtn.addEventListener("click", function(evt) {
+    removeBtnDiv.addEventListener("click", function(evt) {
 
         evt.target.parentElement.parentElement.remove();
 
@@ -41,7 +42,7 @@ memeForm.addEventListener("submit", function(e) {
     newDiv.appendChild(topTextDiv);
     newDiv.appendChild(btmTextDiv);
     newDiv.appendChild(removeBtnDiv);
-    removeBtnDiv.appendChild(removeBtn);
+    // removeBtnDiv.appendChild(removeBtn);
 
     let canvas = document.querySelector("#meme-results");
     canvas.appendChild(newDiv);
