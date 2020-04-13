@@ -26,7 +26,8 @@ memeForm.addEventListener("submit", function(e) {
     btmTextDiv.classList.add("btmText");
 
     let removeBtn = document.createElement("span");
-    removeBtn.innerText = "X";
+    //use textContent instead of innerText
+    removeBtn.textContent = "X";
 
     removeBtn.classList.add("remveBtn");
     let removeBtnDiv = document.createElement("div");
